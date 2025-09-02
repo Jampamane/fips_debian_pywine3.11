@@ -1,0 +1,8 @@
+# Stage 1: Wine environment with build tools
+FROM tobix/pywine:3.11
+
+# Install required Linux tools for building OpenSSL
+RUN apt-get update && apt-get install -y \
+    curl \
+    unzip \
+    zip
